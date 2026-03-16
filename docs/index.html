@@ -204,6 +204,90 @@
             font-size: 0.85rem;
             color: #f87171;
         }
+
+        /* Typewriter briefing animation */
+        .typewriter-box {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            max-width: 600px;
+            margin: 2rem auto;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            min-height: 220px;
+        }
+
+        .typewriter-box .tw-line {
+            opacity: 0;
+            transform: translateY(4px);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .typewriter-box .tw-line.tw-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .typewriter-box .tw-heading {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .typewriter-box .tw-grade-a { color: #34d399; }
+        .typewriter-box .tw-grade-c { color: #fbbf24; }
+        .typewriter-box .tw-go { color: #34d399; font-weight: 600; }
+        .typewriter-box .tw-dim { color: var(--text-muted); }
+
+        .tw-cursor {
+            display: inline-block;
+            width: 8px;
+            height: 14px;
+            background: var(--accent);
+            animation: tw-blink 1s step-end infinite;
+            vertical-align: middle;
+            margin-left: 2px;
+        }
+
+        @keyframes tw-blink {
+            50% { opacity: 0; }
+        }
+
+        /* Comparison table */
+        .compare-table {
+            width: 100%;
+            max-width: 700px;
+            margin: 1.5rem auto;
+            border-collapse: collapse;
+        }
+
+        .compare-table th,
+        .compare-table td {
+            padding: 0.65rem 0.8rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.85rem;
+        }
+
+        .compare-table th {
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .compare-table td:first-child {
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        @media (max-width: 600px) {
+            .compare-table { font-size: 0.75rem; }
+            .compare-table th, .compare-table td { padding: 0.5rem; }
+        }
     </style>
 </head>
 <body>
@@ -229,6 +313,28 @@
             <a href="#steps" class="btn-secondary">See the 7 steps</a>
         </div>
     </header>
+
+
+    <!-- TYPEWRITER BRIEFING DEMO -->
+    <section class="section animate-in">
+        <div class="typewriter-box" id="typewriter">
+            <div class="tw-line" data-delay="0"><span class="tw-heading"># Reconnaissance Briefing: Algo-Trading</span></div>
+            <div class="tw-line" data-delay="400"></div>
+            <div class="tw-line" data-delay="600"><span class="tw-heading">## Scope</span></div>
+            <div class="tw-line" data-delay="900"><span class="tw-dim">Event-driven trading in energy markets...</span></div>
+            <div class="tw-line" data-delay="1300"></div>
+            <div class="tw-line" data-delay="1500"><span class="tw-heading">## Landscape Map</span></div>
+            <div class="tw-line" data-delay="1800">Ernest Chan <span class="tw-grade-a">(A)</span> · Narang <span class="tw-grade-a">(A)</span> · Harris <span class="tw-grade-a">(A)</span></div>
+            <div class="tw-line" data-delay="2200"><span class="tw-dim">Half-Life: Medium · Communities: QuantStart, r/algotrading</span></div>
+            <div class="tw-line" data-delay="2600"></div>
+            <div class="tw-line" data-delay="2800"><span class="tw-heading">## Mistake Audit</span></div>
+            <div class="tw-line" data-delay="3100">1. Overfitting <span class="tw-dim">— looks great in backtest, fails live</span></div>
+            <div class="tw-line" data-delay="3500">2. Ignoring real costs <span class="tw-dim">— 20% return → -5% in reality</span></div>
+            <div class="tw-line" data-delay="3900"></div>
+            <div class="tw-line" data-delay="4100"><span class="tw-heading">## Go/No-Go</span></div>
+            <div class="tw-line" data-delay="4500"><span class="tw-go">→ Go with constraint:</span> market knowledge first<span class="tw-cursor"></span></div>
+        </div>
+    </section>
 
 
     <!-- WHY -->
@@ -413,6 +519,25 @@
     </section>
 
 
+    <!-- COMPARISON TABLE -->
+    <section class="section animate-in">
+        <h2 class="section-heading">Three Ways to Use It</h2>
+        <p class="section-intro">No installation required. Pick the mode that fits your workflow.</p>
+
+        <table class="compare-table">
+            <thead>
+                <tr><th></th><th>Manual</th><th>AI-Assisted</th><th>Claude Code Skill</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>What you need</td><td>Pen &amp; paper + search engine</td><td>Any AI + the prompt</td><td>Claude Code + skill file</td></tr>
+                <tr><td>Time per run</td><td>2–4 hours</td><td>30–60 min</td><td>30–60 min</td></tr>
+                <tr><td>Research</td><td>Your own searches</td><td>AI researches, you decide</td><td>AI researches, you decide</td></tr>
+                <tr><td>Best for</td><td>Deep reflection</td><td>Fast exploration</td><td>Repeated use</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+
     <!-- STORY -->
     <section class="section section-story animate-in">
         <h2 class="section-heading">Why this exists</h2>
@@ -477,6 +602,23 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+
+// Typewriter animation — reveal lines with staggered delay
+const twObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const lines = entry.target.querySelectorAll('.tw-line');
+            lines.forEach(line => {
+                const delay = parseInt(line.dataset.delay || 0);
+                setTimeout(() => line.classList.add('tw-visible'), delay);
+            });
+            twObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.3 });
+
+const tw = document.getElementById('typewriter');
+if (tw) twObserver.observe(tw);
 </script>
 
 </body>
