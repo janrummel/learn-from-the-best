@@ -208,6 +208,15 @@ learn-from-the-best/
     └── index.html         ← Landing page (GitHub Pages)
 ```
 
+## Usage Modes
+
+| | Manual | AI-Assisted | Claude Code Skill |
+|---|---|---|---|
+| **What you need** | Pen & paper + search engine | Any AI assistant + the [prompt](framework/PROMPT.md) | Claude Code + [skill](skill/SKILL.md) |
+| **Time per run** | 2–4 hours | 30–60 minutes | 30–60 minutes |
+| **Research quality** | Your own searches | AI handles research, you decide | AI handles research, you decide |
+| **Best for** | Deep personal reflection | Fast, structured exploration | Repeated use, integrated workflow |
+
 ## Methodological Foundations
 
 This framework doesn't reinvent the wheel. It synthesizes proven methods and fills the gap none of them cover:

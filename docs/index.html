@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn from the Best — A reconnaissance framework for learning anything new</title>
+    <meta name="description" content="A structured 7-step framework for finding the best sources, people, and learning paths before you start anything new. Based on the Mondon Method.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Learn from the Best — Reconnaissance Framework">
+    <meta property="og:description" content="Find the best sources, people, and learning paths before you start. 7 steps from scope to Go/No-Go.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://janrummel.github.io/learn-from-the-best/">
+    <meta property="og:image" content="https://janrummel.github.io/learn-from-the-best/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Learn from the Best — Reconnaissance Framework">
+    <meta name="twitter:description" content="Find the best sources, people, and learning paths before you start. 7 steps from scope to Go/No-Go.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="github-presence.css">
+    <style>
+        /* Project-specific overrides */
+        :root {
+            --accent: #f59e0b;
+            --accent-dim: #b45309;
+        }
+
+        .step-flow {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+
+        .step-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.25rem;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            transition: border-color 0.2s;
+        }
+
+        .step-card:hover {
+            border-color: var(--accent);
+        }
+
+        .step-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent);
+            background: rgba(245, 158, 11, 0.1);
+            border-radius: 6px;
+            padding: 0.3rem 0.6rem;
+            white-space: nowrap;
+        }
+
+        .step-label {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .step-label strong {
+            color: var(--text-primary);
+        }
+
+        .step-connector {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin: -0.5rem 0;
+        }
+
+        .grade-table {
+            width: 100%;
+            max-width: 600px;
+            margin: 1.5rem auto;
+            border-collapse: collapse;
+        }
+
+        .grade-table th,
+        .grade-table td {
+            padding: 0.6rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.9rem;
+        }
+
+        .grade-table th {
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .grade-a { color: #34d399; }
+        .grade-b { color: #60a5fa; }
+        .grade-c { color: #fbbf24; }
+        .grade-d { color: #f87171; }
+
+        .halflife-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            max-width: 700px;
+            margin: 1.5rem auto;
+        }
+
+        .halflife-card {
+            text-align: center;
+            padding: 1.25rem 1rem;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+        .halflife-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .halflife-type {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .halflife-desc {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .briefing-preview {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            max-width: 600px;
+            margin: 1.5rem auto;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        .briefing-preview .bp-heading {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .briefing-preview .bp-dim {
+            color: var(--text-muted);
+        }
+
+        .method-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            max-width: 700px;
+            margin: 1.5rem auto;
+        }
+
+        @media (max-width: 600px) {
+            .method-grid { grid-template-columns: 1fr; }
+            .halflife-row { grid-template-columns: 1fr; }
+        }
+
+        .method-card {
+            padding: 1.25rem;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+        .method-card h4 {
+            font-size: 0.9rem;
+            margin: 0 0 0.25rem 0;
+            color: var(--text-primary);
+        }
+
+        .method-card .method-author {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .method-card .method-took {
+            font-size: 0.85rem;
+            color: #34d399;
+        }
+
+        .method-card .method-gap {
+            font-size: 0.85rem;
+            color: #f87171;
+        }
+    </style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<div class="container" id="main">
+
+    <!-- HERO -->
+    <header class="hero">
+        <h1 class="sr-only">Learn from the Best</h1>
+        <div class="hero-logo animate-in">
+            <div class="hero-emoji" aria-hidden="true">🧭</div>
+        </div>
+        <p class="tagline animate-in delay-1">Find the best sources, people, and learning paths — before you start.</p>
+        <div class="badges animate-in delay-2">
+            <span class="badge">7 Steps</span>
+            <span class="badge">Mondon Method</span>
+            <span class="badge">Open Source</span>
+        </div>
+        <div class="cta animate-in delay-2">
+            <a href="https://github.com/janrummel/learn-from-the-best" class="btn-primary">View on GitHub</a>
+            <a href="#steps" class="btn-secondary">See the 7 steps</a>
+        </div>
+    </header>
+
+
+    <!-- WHY -->
+    <section class="section section-why animate-in">
+        <blockquote>
+            In 99% of cases, someone has already done what you're trying to do. <em>The information exists — you just need to know where to look.</em>
+        </blockquote>
+        <p>Most learning frameworks tell you <strong>how</strong> to learn. None of them systematically help you figure out <strong>where to look</strong> and <strong>who to trust</strong> before you start. That's the gap this framework fills.</p>
+    </section>
+
+
+    <!-- THE 7 STEPS -->
+    <section class="section animate-in" id="steps">
+        <h2 class="section-heading">The 7 Steps</h2>
+        <p class="section-intro">From "I want to learn X" to a concrete, informed decision — in one structured pass.</p>
+
+        <div class="step-flow">
+            <div class="step-card">
+                <span class="step-num">1</span>
+                <span class="step-label"><strong>Define Scope</strong> — What exactly do I want?</span>
+            </div>
+            <div class="step-connector">↓</div>
+            <div class="step-card">
+                <span class="step-num">1b</span>
+                <span class="step-label"><strong>Prerequisites</strong> — What do I need first?</span>
+            </div>
+            <div class="step-connector">↓</div>
+            <div class="step-card">
+                <span class="step-num">2</span>
+                <span class="step-label"><strong>Landscape Map</strong> — Who are the best sources?</span>
+            </div>
+            <div class="step-connector">↓</div>
+            <div class="step-card">
+                <span class="step-num">3</span>
+                <span class="step-label"><strong>Mistake Audit</strong> — What goes wrong for most?</span>
+            </div>
+            <div class="step-connector">↓</div>
+            <div class="step-card">
+                <span class="step-num">4</span>
+                <span class="step-label"><strong>80/20 Focus</strong> — What 20% matters most?</span>
+            </div>
+            <div class="step-connector">↓</div>
+            <div class="step-card">
+                <span class="step-num">5</span>
+                <span class="step-label"><strong>Learning Path</strong> — How do I get there?</span>
+            </div>
+            <div class="step-connector">↓</div>
+            <div class="step-card">
+                <span class="step-num">6</span>
+                <span class="step-label"><strong>Go / No-Go</strong> — Is it worth it?</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SOURCE GRADING -->
+    <section class="section section-dark animate-in">
+        <h2 class="section-heading">Source Quality Grading</h2>
+        <p class="section-intro">Not all sources are equal. The framework grades every recommendation so you know what to trust.</p>
+
+        <table class="grade-table">
+            <thead>
+                <tr><th>Grade</th><th>Source Type</th><th>Trust</th></tr>
+            </thead>
+            <tbody>
+                <tr><td class="grade-a"><strong>A</strong></td><td>Peer-reviewed, proven track records</td><td>High</td></tr>
+                <tr><td class="grade-b"><strong>B</strong></td><td>Experienced practitioners with public results</td><td>Medium-High</td></tr>
+                <tr><td class="grade-c"><strong>C</strong></td><td>Blog posts, YouTube, courses without track record</td><td>Verify</td></tr>
+                <tr><td class="grade-d"><strong>D</strong></td><td>Anonymous tips, "get rich quick", no evidence</td><td>Avoid</td></tr>
+            </tbody>
+        </table>
+
+        <p style="text-align:center; font-size:0.85rem; color:var(--text-muted); margin-top:1rem;"><strong>Guru Filter:</strong> In fields without peer review — does this person have results <em>outside</em> of content about the topic?</p>
+    </section>
+
+
+    <!-- KNOWLEDGE HALF-LIFE -->
+    <section class="section animate-in">
+        <h2 class="section-heading">Knowledge Half-Life</h2>
+        <p class="section-intro">Different fields age differently. The framework adapts your source strategy accordingly.</p>
+
+        <div class="halflife-row">
+            <div class="halflife-card">
+                <div class="halflife-icon">📚</div>
+                <div class="halflife-type">Stable</div>
+                <div class="halflife-desc">Years to decades<br>Books, classics, standard works</div>
+            </div>
+            <div class="halflife-card">
+                <div class="halflife-icon">📰</div>
+                <div class="halflife-type">Medium</div>
+                <div class="halflife-desc">Months to years<br>Books + articles, communities</div>
+            </div>
+            <div class="halflife-card">
+                <div class="halflife-icon">⚡</div>
+                <div class="halflife-type">Volatile</div>
+                <div class="halflife-desc">Weeks to months<br>Docs, changelogs — NOT books</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- OUTPUT: RECONNAISSANCE BRIEFING -->
+    <section class="section section-dark animate-in">
+        <h2 class="section-heading">The Output: Reconnaissance Briefing</h2>
+        <p class="section-intro">Every run produces a structured document you can act on.</p>
+
+        <div class="briefing-preview">
+            <span class="bp-heading"># Reconnaissance Briefing: Algorithmic Trading</span><br><br>
+            <span class="bp-heading">## Scope</span><br>
+            <span class="bp-dim">Event-driven trading in energy markets...</span><br><br>
+            <span class="bp-heading">## Prerequisites</span><br>
+            <span class="bp-dim">Market knowledge: ❌ Missing → separate project</span><br><br>
+            <span class="bp-heading">## Landscape Map</span><br>
+            <span class="bp-dim">Half-Life: Medium | Top: Ernest Chan (A), Narang (A)...</span><br><br>
+            <span class="bp-heading">## Mistake Audit</span><br>
+            <span class="bp-dim">1. Overfitting — looks great in backtest, fails live</span><br>
+            <span class="bp-dim">2. Ignoring real costs — 20% return becomes -5%</span><br><br>
+            <span class="bp-heading">## Go/No-Go</span><br>
+            <span class="bp-dim">→ Go with constraint: market knowledge first</span>
+        </div>
+    </section>
+
+
+    <!-- FEATURE CARDS (METHODOLOGY) -->
+    <section class="section animate-in">
+        <h2 class="section-heading">Built on Proven Methods</h2>
+
+        <div class="method-grid">
+            <div class="method-card">
+                <h4>Ultralearning</h4>
+                <div class="method-author">Scott Young</div>
+                <div class="method-took">✓ Metalearning: research before learning</div>
+                <div class="method-gap">✗ No source finding or quality assessment</div>
+            </div>
+            <div class="method-card">
+                <h4>DiSSS</h4>
+                <div class="method-author">Tim Ferriss</div>
+                <div class="method-took">✓ 80/20 selection, deconstruction</div>
+                <div class="method-gap">✗ No landscape mapping, no mistake audit</div>
+            </div>
+            <div class="method-card">
+                <h4>Deliberate Practice</h4>
+                <div class="method-author">Anders Ericsson</div>
+                <div class="method-took">✓ Quality through proven expertise</div>
+                <div class="method-gap">✗ Focused on execution, not reconnaissance</div>
+            </div>
+            <div class="method-card">
+                <h4>First 20 Hours</h4>
+                <div class="method-author">Josh Kaufman</div>
+                <div class="method-took">✓ Pragmatism: "enough to get started"</div>
+                <div class="method-gap">✗ No framework for finding best resources</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FAQ -->
+    <section class="section section-dark animate-in">
+        <h2 class="section-heading">FAQ</h2>
+        <div class="faq">
+            <details class="faq-item">
+                <summary>Is this just another productivity framework?</summary>
+                <p>No. Existing frameworks tell you how to learn. This one tells you where to look and who to trust before you start learning. It's the reconnaissance phase that comes before Ultralearning, DiSSS, or any other method.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Do I need AI to use this?</summary>
+                <p>No. The 7 steps work with pen and paper, a search engine, and your own judgment. AI assistants speed up the research phase but aren't required.</p>
+            </details>
+            <details class="faq-item">
+                <summary>How long does a full run take?</summary>
+                <p>With an AI assistant: 30–60 minutes. Manually: 2–4 hours. Either way, it's a fraction of the time you'd waste learning from the wrong sources.</p>
+            </details>
+            <details class="faq-item">
+                <summary>What if my topic is too niche?</summary>
+                <p>The framework scales. For niche topics, the landscape map will be smaller — but the mistake audit and 80/20 selection become even more valuable because there's less margin for error.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Why "Mondon Method"?</summary>
+                <p>Named after Andrew Mondon, a mentor who consistently demonstrated that the fastest path to mastery starts with finding who's already walked it. The principle: don't reinvent — reconnect.</p>
+            </details>
+        </div>
+    </section>
+
+
+    <!-- STORY -->
+    <section class="section section-story animate-in">
+        <h2 class="section-heading">Why this exists</h2>
+        <div class="story-content">
+            <p>I kept starting new projects the hard way — diving into random tutorials, following whoever had the best SEO, and discovering three months later that there was a better book, a clearer path, or a mistake I could have easily avoided.</p>
+            <p>A mentor once told me: "In 99% of cases, someone has already solved your problem. Your job isn't to reinvent — it's to find them." That stuck. I started mapping the landscape before jumping in. The results were immediate: less wasted time, better foundations, fewer dead ends.</p>
+            <p>This framework is the system I wish I had from the start. It combines the best ideas from Ultralearning, DiSSS, and Deliberate Practice into the one phase none of them cover: figuring out where to look before you start learning.</p>
+        </div>
+    </section>
+
+
+    <!-- QUICK START -->
+    <section class="section section-dark animate-in">
+        <h2 class="section-heading">Get Started</h2>
+        <div class="quickstart">
+            <div class="qs-step">
+                <div class="qs-number">1</div>
+                <div class="qs-content">
+                    <div class="qs-title">Pick a topic</div>
+                    <p class="qs-desc">Choose something you want to learn, build, or understand.</p>
+                </div>
+            </div>
+            <div class="qs-step">
+                <div class="qs-number">2</div>
+                <div class="qs-content">
+                    <div class="qs-title">Walk through the 7 steps</div>
+                    <p class="qs-desc">Manually, with an AI assistant, or as a <a href="https://github.com/janrummel/learn-from-the-best/tree/main/skill">Claude Code skill</a>.</p>
+                </div>
+            </div>
+            <div class="qs-step">
+                <div class="qs-number">3</div>
+                <div class="qs-content">
+                    <div class="qs-title">Act on your briefing</div>
+                    <p class="qs-desc">You now have the best sources, a mistake audit, and a concrete plan. Go.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://github.com/janrummel/learn-from-the-best">GitHub</a>
+            <span class="footer-sep">·</span>
+            <a href="https://github.com/janrummel/learn-from-the-best/tree/main/examples">Examples</a>
+            <span class="footer-sep">·</span>
+            <a href="https://github.com/janrummel/learn-from-the-best/tree/main/framework">Framework Prompt</a>
+        </div>
+        <p class="dim">Don't reinvent — reconnect. The Mondon Method.</p>
+    </footer>
+
+</div>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
