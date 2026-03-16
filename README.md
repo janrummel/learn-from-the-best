@@ -65,13 +65,13 @@ That's the gap this framework fills.
 
 > What exactly do I want to know or be able to do — and what explicitly NOT?
 
-Not "learn algo-trading" but "understand if event-driven trading in energy markets makes sense for me, and test a first bot." The sharper the scope, the better the results.
+Not "learn to write a book" but "preserve my domain expertise as a practitioner in a nonfiction book for the next generation of engineers." The sharper the scope, the better the results.
 
 ### Step 1b: Prerequisites Check
 
 > What do I need to know BEFORE I start?
 
-Catch dependencies early. If algo-trading requires financial market knowledge you don't have, that's a separate project — not a surprise at the end.
+Catch dependencies early. If writing a book requires learning the craft of nonfiction writing first, that's a prerequisite — not a surprise at the end.
 
 ### Step 2: Draw the Landscape Map
 
