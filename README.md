@@ -165,14 +165,21 @@ Every run produces a **Reconnaissance Briefing**:
 [Recommendation + reasoning, including dependencies]
 ```
 
+## When to Use This
+
+**Best for:** Entering a new field, career pivots, ambitious projects, learning something with real stakes.
+**Overkill for:** Quick how-tos, single-tool lookups, topics you already know well.
+
+The sweet spot is when the cost of learning from the wrong sources is high — in time, money, or motivation.
+
 ## Quick Start
 
 No installation needed. This is a thinking framework, not software.
 
 **Option A — Use it manually:**
 1. Pick a topic you want to explore
-2. Walk through the 7 steps above
-3. Write your Reconnaissance Briefing
+2. Copy the [briefing template](templates/briefing-template.md) and walk through the 7 steps
+3. Fill in each section as you go
 
 **Option B — Use it with an AI assistant:**
 1. Copy the [framework prompt](framework/PROMPT.md) into your AI tool
@@ -201,6 +208,8 @@ learn-from-the-best/
 │   └── PROMPT.md          ← The full framework as a reusable prompt
 ├── skill/
 │   └── SKILL.md           ← Claude Code skill version
+├── templates/
+│   └── briefing-template.md ← Blank template to fill in
 ├── examples/
 │   ├── nonfiction-book.md ← Example briefing: writing a book
 │   └── algo-trading.md    ← Example briefing: algorithmic trading
@@ -219,14 +228,14 @@ learn-from-the-best/
 
 ## Methodological Foundations
 
-This framework doesn't reinvent the wheel. It synthesizes proven methods and fills the gap none of them cover:
+This framework doesn't reinvent the wheel. It synthesizes proven methods and adds what they cover only lightly:
 
-| Method | Author | What we took | What was missing |
+| Method | Author | What we took | What we add on top |
 |--------|--------|-------------|-----------------|
-| **Ultralearning** | Scott Young | Metalearning (research how to learn before learning) | No systematic source finding or quality assessment |
-| **DiSSS** | Tim Ferriss | 80/20 selection, deconstruction, sequencing | No landscape mapping, no mistake audit |
-| **Deliberate Practice** | Anders Ericsson | Quality assessment through proven expertise | Focused on execution, not on reconnaissance |
-| **First 20 Hours** | Josh Kaufman | Pragmatism ("enough to get started") | No framework for finding the best starting resources |
+| **Ultralearning** | Scott Young | Metalearning (research how to learn before learning) | Systematic source grading (A–D) and guru filter |
+| **DiSSS** | Tim Ferriss | 80/20 selection, deconstruction, sequencing | Dedicated landscape mapping and mistake audit phases |
+| **Deliberate Practice** | Anders Ericsson | Quality assessment through proven expertise | Structured reconnaissance before execution begins |
+| **First 20 Hours** | Josh Kaufman | Pragmatism ("enough to get started") | Systematic process for finding the best starting resources |
 
 **The Mondon Method** — named after a mentor who believed that in 99% of cases, someone has already solved your problem — ties these together with a systematic reconnaissance phase that comes *before* any of these frameworks kick in.
 
@@ -236,12 +245,15 @@ This framework doesn't reinvent the wheel. It synthesizes proven methods and fil
 - [x] Source quality grading (A–D + Guru Filter)
 - [x] Knowledge half-life classification
 - [x] Prerequisites check (dependency detection)
-- [x] Stress-tested across 5 diverse topics
+- [x] Author-tested across 5 topics (nonfiction writing, algo-trading, quantum computing, personal branding, AI agents)
 - [ ] More example briefings (quantum computing, personal branding)
 - [ ] Community-contributed briefings
 - [ ] Template generator (interactive)
 
 ## FAQ
+
+**Why not just ask ChatGPT to "research X for me"?**
+You can — and this framework works great with AI. The difference: a single prompt gives you a one-shot answer that varies with phrasing. The 7 steps give you a reproducible process with specific tools (guru filter, source grading, knowledge half-life) that catch things a generic prompt misses. The output is a reusable briefing you can reference, update, and share — not a chat message you'll lose.
 
 **Is this just another productivity framework?**
 No. Existing frameworks tell you *how* to learn. This one tells you *where to look* and *who to trust* before you start learning. It's the reconnaissance phase that comes before Ultralearning, DiSSS, or any other method.
