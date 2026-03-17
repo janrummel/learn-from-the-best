@@ -148,6 +148,22 @@ For meta-skills (positioning, communication): start doing early, learn from feed
 
 Evaluate: effort, risk, fit with your goals, timing. The answer can be "Go", "Go with constraints" (dependencies first), or "No-Go" with a clear reason.
 
+## When to Stop Researching
+
+Every research step needs a stop signal. The framework has 5 built-in signals — when any one fires, you can move on:
+
+| Signal | What It Means | Example |
+|--------|--------------|---------|
+| **Convergence** | Same sources keep appearing across different searches | Three different "best books for X" lists all recommend the same 4 titles |
+| **Impact threshold** | What you already have is sufficient (Step 1c) | Impact test shows existing data covers 95% of needs |
+| **Blocker** | A prerequisite is missing — this becomes a separate project | Can't learn algo-trading without understanding markets first |
+| **Quality ceiling** | No more A/B sources findable, only C/D | Field is dominated by marketing, not evidence |
+| **Scope boundary** | Your original question is answered, even if the answer is "no" | "Is quantum computing relevant for my work?" → No → Done |
+
+**Safety net:** If after 3 rounds of searching none of these signals fires, stop and decide consciously rather than researching indefinitely.
+
+Stable topics (physics, writing craft) typically converge in 1–2 rounds. Volatile topics (AI tools, frameworks) need targeted searches in the right places — docs and changelogs, not books.
+
 ## Output Format
 
 Every run produces a **Reconnaissance Briefing**:
@@ -272,8 +288,8 @@ This framework doesn't reinvent the wheel. It synthesizes proven methods and add
 - [x] Inventory check with impact test (v3)
 - [x] Topic-type-aware landscape mapping (v3)
 - [x] Research depth heuristic with 5 stop signals (v3)
-- [x] Pattern library from real-world usage (v3)
-- [x] Author-tested across 7 topics (nonfiction writing, algo-trading, quantum computing, personal branding, AI agents, charging curve data sources, scientific quality standards)
+- [x] Emerging patterns from real-world usage (v3, grows with contributions)
+- [x] Author-tested across 4 real topics + 3 stress tests (nonfiction writing, algo-trading, EV charging data, scientific quality standards — stress-tested on quantum computing, personal branding, AI agents)
 - [ ] More example briefings (contributions welcome — see [Contributing](#contributing))
 
 ## FAQ

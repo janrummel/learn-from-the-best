@@ -12,11 +12,23 @@ Understand event-driven, strategic trading in niche markets (energy certificates
 
 **Early Warning:** Without market understanding, algorithmic trading becomes "automating nonsense." The prerequisite project should be prioritized.
 
+## Inventory Check
+
+**Already available:** Python proficiency, engineering statistics background, general interest in energy markets from professional context.
+
+**Utilization:** Fully used — programming and stats are directly applicable. But energy market knowledge is surface-level, not tradeable.
+
+**Diagnosis:** Substance gap — market understanding is genuinely missing, not just poorly connected. This confirms the prerequisite finding above.
+
 ## Landscape Map
 
 **Knowledge Half-Life:** Medium (market mechanics are stable, specific strategies and tools change yearly)
 
-**Top People:**
+**Briefing Expiry:** Valid until approx. 2027-06 (strategies and tools evolve yearly, people and books stay relevant longer)
+
+**Topic Type:** Practice field
+
+**Top Sources:**
 
 | Person | Why Relevant | Grade |
 |--------|-------------|-------|

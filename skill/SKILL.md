@@ -209,9 +209,9 @@ Every research step (Landscape Map, Mistake Audit, 80/20) needs a stop signal. D
 - **Honesty:** If a field is dubious or too risky — say so
 - **Pragmatism:** The goal is capability to act, not completeness
 
-## Pattern Library
+## Emerging Patterns
 
-Recurring patterns from real framework runs. Grows with usage.
+Recurring patterns from real framework runs. This section grows with usage — each pattern needs at least 2 independent confirmations before being added.
 
 ### Pattern 1: Gap = Bridge, Not Source
 > The most common cause of seemingly missing information is not missing substance, but missing connections between existing sources.

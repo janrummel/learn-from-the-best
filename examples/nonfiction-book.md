@@ -10,11 +10,23 @@ Write a nonfiction book to preserve 6 years of domain expertise as a project eng
 - **Writing skills:** Needs development — engineer, not author
 - **Publishing knowledge:** Missing — needs research (self-publishing vs. traditional)
 
+## Inventory Check
+
+**Already available:** 6 years of domain expertise, extensive project documentation, internal training materials, conference presentations.
+
+**Utilization:** Untapped potential — raw material exists but has never been structured for an external audience.
+
+**Diagnosis:** Bridge gap — the knowledge exists, the gap is in packaging and narrative structure. No new research needed, but writing craft is a real skill gap.
+
 ## Landscape Map
 
 **Knowledge Half-Life:** Stable (writing craft hasn't changed fundamentally in decades)
 
-**Top People:**
+**Briefing Expiry:** Valid until approx. 2030 (stable field, classics don't age)
+
+**Topic Type:** Practice field
+
+**Top Sources:**
 
 | Person | Why Relevant | Grade |
 |--------|-------------|-------|
