@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Central amber glow -->
+    <radialGradient id="warmGlow" cx="50%" cy="48%" r="45%" fx="50%" fy="48%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.18"/>
+      <stop offset="40%" stop-color="#f59e0b" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Subtle secondary glow -->
+    <radialGradient id="secondaryGlow" cx="50%" cy="55%" r="35%" fx="50%" fy="55%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Top vignette -->
+    <linearGradient id="topVignette" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#08090c" stop-opacity="0.5"/>
+      <stop offset="30%" stop-color="#0d1117" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Bottom vignette -->
+    <linearGradient id="bottomVignette" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="70%" stop-color="#0d1117" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#08090c" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0d1117"/>
+
+  <!-- Glow layers -->
+  <rect width="1200" height="630" fill="url(#warmGlow)"/>
+  <rect width="1200" height="630" fill="url(#secondaryGlow)"/>
+
+  <!-- Vignette edges -->
+  <rect width="1200" height="630" fill="url(#topVignette)"/>
+  <rect width="1200" height="630" fill="url(#bottomVignette)"/>
+
+  <!-- Subtle separator line -->
+  <line x1="400" y1="500" x2="800" y2="500" stroke="#f59e0b" stroke-opacity="0.12" stroke-width="1"/>
+
+  <!-- Compass icon -->
+  <g transform="translate(600, 155)">
+    <!-- Outer ring -->
+    <circle cx="0" cy="0" r="34" fill="none" stroke="#f59e0b" stroke-width="2" stroke-opacity="0.6"/>
+    <!-- Inner ring -->
+    <circle cx="0" cy="0" r="28" fill="none" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.3"/>
+    <!-- Cardinal ticks -->
+    <line x1="0" y1="-34" x2="0" y2="-28" stroke="#f59e0b" stroke-width="2" stroke-opacity="0.8"/>
+    <line x1="0" y1="28" x2="0" y2="34" stroke="#f59e0b" stroke-width="2" stroke-opacity="0.8"/>
+    <line x1="-34" y1="0" x2="-28" y2="0" stroke="#f59e0b" stroke-width="2" stroke-opacity="0.8"/>
+    <line x1="28" y1="0" x2="34" y2="0" stroke="#f59e0b" stroke-width="2" stroke-opacity="0.8"/>
+    <!-- Compass needle N (amber) -->
+    <polygon points="0,-22 -6,0 0,-4 6,0" fill="#f59e0b" fill-opacity="0.9"/>
+    <!-- Compass needle S (dim) -->
+    <polygon points="0,22 -6,0 0,4 6,0" fill="#848d97" fill-opacity="0.5"/>
+    <!-- Center dot -->
+    <circle cx="0" cy="0" r="3" fill="#f59e0b" fill-opacity="0.8"/>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="300" text-anchor="middle" font-family="'Inter', 'SF Pro Display', -apple-system, Arial, Helvetica, sans-serif" font-size="52" font-weight="700" fill="#e6edf3" letter-spacing="0.5">
+    Learn from the Best
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="365" text-anchor="middle" font-family="'Inter', 'SF Pro Display', -apple-system, Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#848d97" letter-spacing="0.3">
+    A reconnaissance framework for learning anything new
+  </text>
+
+  <!-- Footer stats -->
+  <text x="600" y="545" text-anchor="middle" font-family="'Inter', 'SF Pro Display', -apple-system, Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#848d97" letter-spacing="1.5">
+    7 Steps  &#xB7;  Mondon Method  &#xB7;  Any Topic
+  </text>
+</svg>
