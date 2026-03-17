@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://em-content.zobj.net/source/apple/391/compass_1f9ed.png" width="80" alt="Learn from the Best">
-</p>
-
 <h1 align="center">Learn from the Best</h1>
 
 <p align="center">
