@@ -246,9 +246,7 @@ This framework doesn't reinvent the wheel. It synthesizes proven methods and add
 - [x] Knowledge half-life classification
 - [x] Prerequisites check (dependency detection)
 - [x] Author-tested across 5 topics (nonfiction writing, algo-trading, quantum computing, personal branding, AI agents)
-- [ ] More example briefings (quantum computing, personal branding)
-- [ ] Community-contributed briefings
-- [ ] Template generator (interactive)
+- [ ] More example briefings (contributions welcome — see [Contributing](#contributing))
 
 ## FAQ
 
