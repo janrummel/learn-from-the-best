@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="#the-problem">The Problem</a> ·
-  <a href="#the-7-steps">The 7 Steps</a> ·
+  <a href="#the-8-steps">The 8 Steps</a> ·
   <a href="#quick-start">Quick Start</a> ·
   <a href="#examples">Examples</a> ·
   <a href="#faq">FAQ</a>
@@ -19,7 +19,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status">
-  <img src="https://img.shields.io/badge/steps-7-orange" alt="Steps">
+  <img src="https://img.shields.io/badge/steps-8-orange" alt="Steps">
   <img src="https://img.shields.io/badge/license-MIT-lightgrey" alt="License">
 </p>
 
@@ -43,22 +43,26 @@ That's the gap this framework fills.
 | **Learning path** | Vague sense of "I should read something" | Concrete plan with priorities and milestones |
 | **Decision** | "I guess I'll just start and see" | Informed Go/No-Go with clear dependencies |
 
-## The 7 Steps
+## The 8 Steps
 
 ```
-┌─────────────────────────────────────────────────┐
-│                                                 │
-│  1. Scope          → What exactly do I want?    │
-│  1b. Prerequisites → What do I need first?      │
-│  2. Landscape Map  → Who are the best sources?  │
-│  3. Mistake Audit  → What goes wrong for most?  │
-│  4. 80/20 Focus    → What 20% matters most?     │
-│  5. Learning Path  → How do I get there?        │
-│  6. Go/No-Go       → Is it worth it?            │
-│                                                 │
-│  Output: Reconnaissance Briefing                │
-│                                                 │
-└─────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────┐
+│                                                      │
+│  1. Scope           → What exactly do I want?        │
+│  1b. Prerequisites  → What do I need first?          │
+│  1c. Inventory      → What do I already have?        │
+│  2. Landscape Map   → Who are the best sources?      │
+│  3. Mistake Audit   → What goes wrong for most?      │
+│  4. 80/20 Focus     → What 20% matters most?         │
+│  5. Learning Path   → How do I get there?            │
+│  6. Go/No-Go        → Is it worth it?                │
+│                                                      │
+│  Output: Reconnaissance Briefing                     │
+│                                                      │
+│  Stop signals: Convergence · Impact · Blocker        │
+│                Quality ceiling · Scope boundary      │
+│                                                      │
+└──────────────────────────────────────────────────────┘
 ```
 
 ### Step 1: Define Scope
@@ -73,9 +77,23 @@ Not "learn to write a book" but "preserve my domain expertise as a practitioner 
 
 Catch dependencies early. If writing a book requires learning the craft of nonfiction writing first, that's a prerequisite — not a surprise at the end.
 
+### Step 1c: Inventory Check
+
+> What do I ALREADY have — and is it enough?
+
+Before searching externally, check what you already have. The most common cause of seemingly missing information isn't missing substance — it's missing connections between existing sources. An impact test reveals whether you need new sources or better mapping of what's already there.
+
 ### Step 2: Draw the Landscape Map
 
-> Who are the key people, key works, and key communities?
+> Who or what are the key sources in this field?
+
+The map looks different depending on the topic type:
+
+| Topic Type | Primary Sources | Example |
+|------------|----------------|---------|
+| **Practice field** | People with track records | Algo-trading, book writing |
+| **Standards/norms** | Institutions, reference frameworks | Quality standards, compliance |
+| **Research** | Peer-reviewed papers, datasets | Scientific topics, technology |
 
 Find the signal in the noise:
 
@@ -143,9 +161,15 @@ Every run produces a **Reconnaissance Briefing**:
 ## Prerequisites
 [What needs to be in place? Status: available / missing / separate project needed]
 
+## Inventory Check
+**Already available:** [What exists already?]
+**Diagnosis:** [Substance gap (new source needed) OR Bridge gap (mapping needed)]
+
 ## Landscape Map
 **Knowledge Half-Life:** [Stable / Medium / Volatile]
-**Top People:** [3–5 with quality grade]
+**Briefing Expiry:** [Valid until approx. YYYY-MM]
+**Topic Type:** [Practice field / Standards-norms / Research]
+**Top Sources:** [3–5 with quality grade]
 **Top Works:** [3–5 with quality grade]
 **Communities:** [1–2]
 **State of the Art:** [1–2 sentences]
@@ -178,7 +202,7 @@ No installation needed. This is a thinking framework, not software.
 
 **Option A — Use it manually:**
 1. Pick a topic you want to explore
-2. Copy the [briefing template](templates/briefing-template.md) and walk through the 7 steps
+2. Copy the [briefing template](templates/briefing-template.md) and walk through the 8 steps
 3. Fill in each section as you go
 
 **Option B — Use it with an AI assistant:**
@@ -241,23 +265,30 @@ This framework doesn't reinvent the wheel. It synthesizes proven methods and add
 
 ## Roadmap
 
-- [x] Core framework (7 steps)
+- [x] Core framework (8 steps)
 - [x] Source quality grading (A–D + Guru Filter)
 - [x] Knowledge half-life classification
 - [x] Prerequisites check (dependency detection)
-- [x] Author-tested across 5 topics (nonfiction writing, algo-trading, quantum computing, personal branding, AI agents)
+- [x] Inventory check with impact test (v3)
+- [x] Topic-type-aware landscape mapping (v3)
+- [x] Research depth heuristic with 5 stop signals (v3)
+- [x] Pattern library from real-world usage (v3)
+- [x] Author-tested across 7 topics (nonfiction writing, algo-trading, quantum computing, personal branding, AI agents, charging curve data sources, scientific quality standards)
 - [ ] More example briefings (contributions welcome — see [Contributing](#contributing))
 
 ## FAQ
 
 **Why not just ask ChatGPT to "research X for me"?**
-You can — and this framework works great with AI. The difference: a single prompt gives you a one-shot answer that varies with phrasing. The 7 steps give you a reproducible process with specific tools (guru filter, source grading, knowledge half-life) that catch things a generic prompt misses. The output is a reusable briefing you can reference, update, and share — not a chat message you'll lose.
+You can — and this framework works great with AI. The difference: a single prompt gives you a one-shot answer that varies with phrasing. The 8 steps give you a reproducible process with specific tools (guru filter, source grading, knowledge half-life) that catch things a generic prompt misses. The output is a reusable briefing you can reference, update, and share — not a chat message you'll lose.
 
 **Is this just another productivity framework?**
 No. Existing frameworks tell you *how* to learn. This one tells you *where to look* and *who to trust* before you start learning. It's the reconnaissance phase that comes before Ultralearning, DiSSS, or any other method.
 
 **Do I need AI to use this?**
-No. The 7 steps work with pen and paper, a search engine, and your own judgment. AI assistants speed up the research phase but aren't required.
+No. The 8 steps work with pen and paper, a search engine, and your own judgment. AI assistants speed up the research phase but aren't required.
+
+**How do I know when to stop researching?**
+The framework has 5 built-in stop signals: convergence (same names keep appearing), impact threshold (existing resources are sufficient), blocker (prerequisite missing), quality ceiling (no A/B sources left), and scope boundary (your question is answered). If none fires after 3 rounds, it's time to decide consciously.
 
 **How long does a full run take?**
 With an AI assistant: 30–60 minutes. Manually: 2–4 hours depending on the topic's complexity. Either way, it's a fraction of the time you'd waste learning from the wrong sources.

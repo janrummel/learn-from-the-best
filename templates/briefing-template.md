@@ -11,11 +11,24 @@
 |-------------|--------|
 |  |  |
 
+## Inventory Check
+<!-- What do you already have? Is the gap about substance or connection? -->
+
+**Already available:**
+
+**Utilization:** [ Fully used / Untapped potential / Not connected ]
+
+**Diagnosis:** [ Substance gap (new source needed) / Bridge gap (mapping/connection needed) ]
+
 ## Landscape Map
 
 **Knowledge Half-Life:** [ Stable / Medium / Volatile ]
 
-**Top People:**
+**Briefing Expiry:** [ Valid until approx. YYYY-MM ]
+
+**Topic Type:** [ Practice field / Standards-norms / Research ]
+
+**Top Sources:**
 | Name | Grade (A–D) | Why |
 |------|-------------|-----|
 |  |  |  |
