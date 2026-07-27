@@ -291,7 +291,7 @@ learn-from-the-best/
 
 This framework doesn't reinvent the wheel. It synthesizes proven methods and adds what they cover only lightly:
 
-| Method | Author | What we took | What we add on top |
+| Method | Author | What this framework takes | What it adds on top |
 |--------|--------|-------------|-----------------|
 | **Ultralearning** | Scott Young | Metalearning (research how to learn before learning) | Systematic source grading (A–D) and guru filter |
 | **DiSSS** | Tim Ferriss | 80/20 selection, deconstruction, sequencing | Dedicated landscape mapping and mistake audit phases |
