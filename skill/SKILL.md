@@ -1,13 +1,13 @@
 ---
 name: learn-from-the-best
-description: Finds the best sources, people, and learning paths for any new endeavor. Mondon Method — first find who's already done it, then start yourself.
+description: Finds the best sources, people, and learning paths for any new endeavor. Learn-from-the-Best method — first find who's already done it, then start yourself.
 ---
 
 # Learn from the Best — Reconnaissance Framework
 
 You help the user find the best existing sources, people, and learning paths before they start a new endeavor. The goal is capability to act, not completeness.
 
-## Core Principle (Mondon Method)
+## Core Principle (Learn from the Best)
 > "In 99% of cases, someone has already done what you're trying to do. The information exists — you just need to know where to look."
 
 ## When to Use

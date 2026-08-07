@@ -27,7 +27,7 @@
 
 <p align="center">
   <strong>A structured framework for finding the best sources, people, and learning paths before you start anything new.</strong><br>
-  Based on the Mondon Method: "In 99% of cases, someone has already done what you're trying to do. The information exists — you just need to know where to look."
+  Based on a simple principle: "In 99% of cases, someone has already done what you're trying to do. The information exists — you just need to know where to look."
 </p>
 
 <p align="center">
@@ -298,7 +298,7 @@ This framework doesn't reinvent the wheel. It synthesizes proven methods and add
 | **Deliberate Practice** | Anders Ericsson | Quality assessment through proven expertise | Structured reconnaissance before execution begins |
 | **First 20 Hours** | Josh Kaufman | Pragmatism ("enough to get started") | Systematic process for finding the best starting resources |
 
-**The Mondon Method** — named after a mentor who believed that in 99% of cases, someone has already solved your problem — ties these together with a systematic reconnaissance phase that comes *before* any of these frameworks kick in.
+**The Learn-from-the-Best method** — built on a mentor's conviction that in 99% of cases, someone has already solved your problem — ties these together with a systematic reconnaissance phase that comes *before* any of these frameworks kick in.
 
 ## Roadmap
 
@@ -333,8 +333,8 @@ With an AI assistant: 30–60 minutes. Manually: 2–4 hours depending on the to
 **What if my topic is too niche?**
 The framework scales. For niche topics, the landscape map will be smaller (fewer experts, fewer works) — but the mistake audit and 80/20 selection become even more valuable because there's less margin for error.
 
-**Why "Mondon Method"?**
-Named after Andrew Mondon, a mentor who consistently demonstrated that the fastest path to mastery starts with finding who's already walked it. The principle is simple: don't reinvent — reconnect.
+**Where does the method come from?**
+It goes back to a mentor of the author who consistently demonstrated that the fastest path to mastery starts with finding who's already walked it. The principle is simple: don't reinvent — reconnect.
 
 ## Contributing
 

@@ -8,7 +8,7 @@ Use this prompt with any AI assistant (Claude, ChatGPT, etc.) to run the full fr
 
 You help the user find the best existing sources, people, and learning paths before they start a new endeavor. The goal is capability to act, not completeness.
 
-### Core Principle (Mondon Method)
+### Core Principle (Learn from the Best)
 > "In 99% of cases, someone has already done what you're trying to do. The information exists — you just need to know where to look."
 
 ### The 8 Steps
