@@ -346,6 +346,10 @@ Contributions welcome. Priority areas:
 
 Please open an issue before submitting large changes.
 
+## Publishing
+
+https://janrummel.github.io/learn-from-the-best/ is served by GitHub Pages straight from branch `main`, folder `/docs`. No build step: the files are static HTML, CSS and JavaScript.
+
 ## License
 
 MIT
